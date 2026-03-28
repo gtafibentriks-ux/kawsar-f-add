@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    { "src": "/remove_friend", "dest": "app.py" },
+    { "src": "/add_friend", "dest": "app.py" },
+    { "src": "/get_player_info", "dest": "app.py" },
+    { "src": "/token", "dest": "app.py" },
+    { "src": "/health", "dest": "app.py" },
+    { "src": "/(.*)", "dest": "app.py" }
+  ]
+}
